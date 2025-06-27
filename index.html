@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basketball Scoreboard</title>
+  <link href="https://fonts.cdnfonts.com/css/cursed-timer-ulil" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  
+  <div class="conteiner">
+   
+    <div class="team">
+      <h3>HOME</h3>
+      <p id="leading-home-team" onclick="leadingTeam()"></p>
+      <div class="box gol">0</div>
+      <div class="nums">
+        <div class="block"  onclick="add1Home()">+1</div>
+        <div class="block" onclick="add2Home()">+2</div>
+        <div class="block" onclick="add3Home()">+3</div>
+      </div>
+    </div>
+    
+    <!--Створюємо корзинку-->
+    <div class="hoop-container">
+      <img src="Grade_3-6___Basketball_skills-removebg-preview.png" alt = "Basket" class="hoop">
+    </div>
+    <audio id="score-sound" src="score.mp3" preload="auto"></audio>
+
+
+    <div class="team">
+      <h3>GUEST</h3>
+      <p id="leading-guest-team" onclick="leadingTeam()"></p>
+      <div class="box gol2" >0</div>
+      <div class="nums">
+        <div class="block" onclick="add1Guest()">+1</div>
+        <div class="block" onclick="add2Guest()">+2</div>
+        <div class="block" onclick="add3Guest()">+3</div>
+      </div>
+    </div>
+  </div>
+      <div id="div-btn">
+        <button id="btn" onclick="newGame()">New Game</button>
+      </div>
+      <!--Таймер-->
+     <button id="timer">Time: 60</button>
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+body {
+  margin: 0;
+  background-image: url(basketball3.jpg);
+  background-size: cover;
+  font-family: Verdana, sans-serif;
+  cursor: pointer;
+}
+
+.conteiner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  color: white;
+  
+  
+}
+h3 {
+  font-size: 40px;
+  text-align: center;
+  
+}
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.box {
+  width: 155px;
+  height: 120px;
+  background-color: black;
+  display: flex;
+  justify-content:center;
+  align-items:start;
+  color: #F94F6D;
+  font-family: Cursed Timer ULiL;
+  font-size: 100px;
+  padding-top: 20px;
+  line-height: 100px;
+  
+  
+}
+.nums {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.block {
+  margin-top: 30px;
+  border: 1px solid #9AABD8;
+  width: 45px;
+  height: 45px;
+  margin-right: 8px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Cursed Timer ULiL;
+}
+#leading-home-team,
+#leading-guest-team {
+  height: 20px; /* постійна висота, щоб уникнути "стрибків" */
+  font-size: 16px;
+  font-weight: bold;
+  color: yellow;
+  margin: 0;
+  padding: 0;
+}
+#timer {
+  width: 120px;
+  height: 45px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 10px;
+  text-align: center;
+  margin: 20px auto;
+  display: block;
+  font-family: 'Cursed Timer ULiL', monospace;
+  pointer-events: none; /* на всяк випадок */
+}
+
+.hoop-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 40px 0;
+  height: 200px;
+  margin-top: 40px;
+}
+.hoop {
+  width: 200px;
+  margin-top: 50px;
+  z-index: 1;
+}
+.ball {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+/* Зліва направо */
+.from-home {
+  left: 20%;
+  animation: dropFromLeft 1s ease-in forwards;
+}
+
+/* Справа наліво */
+.from-guest {
+  left: 80%;
+  animation: dropFromRight 1s ease-in forwards;
+}
+
+@keyframes dropFromLeft {
+  0% {
+    top: -60px;
+    opacity: 1;
+    transform: translateX(-40%) scale(1);
+  }
+  70% {
+    top: 100px;
+    transform: translateX(-40%) scale(1.1);
+  }
+  100% {
+    top: 130px;
+    transform: translateX(-30%) scale(0.8);
+    opacity: 0;
+  }
+}
+
+@keyframes dropFromRight {
+  0% {
+    top: -60px;
+    opacity: 1;
+    transform: translateX(-100%) scale(1);
+  }
+  70% {
+    top: 100px;
+    transform: translateX(-100%) scale(1.1);
+  }
+  100% {
+    top: 130px;
+    transform: translateX(-100%) scale(0.8);
+    opacity: 0;
+  }
+}
+#div-btn {
+  display: block;
+  width:140px;
+  margin: 0px auto;
+  margin-top: 50px;
+  
+}
+#btn {
+  background-color: #F94F6D;
+  border: 2px solid black;
+  padding:10px 40px;
+  border-radius: 15px;
+  font-family: Verdana;
+  cursor: pointer;
+  font-weight: bold;
+  
+}
